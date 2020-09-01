@@ -8,23 +8,27 @@ import MyPage from "../component/MyPage";
 
 const Routes = (props) => {
   return (
-    <>
-      <Route exact path="/">
-        <Home />
-      </Route>
-      <Route path="survey-type">
-        <SurveyType />
-      </Route>
-      <Route path="survey-style">
-        <SurveyStyle />
-      </Route>
-      <Route path="survey-result">
-        <SurveyResult />
-      </Route>
-      <Route path="my-page">
-        <MyPage />
-      </Route>
-    </>
+    <div className="main-container">
+      <>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/survey-type">
+            <SurveyType />
+          </Route>
+          <Route path="/survey-style">
+            <SurveyStyle />
+          </Route>
+          <Route path="/survey-result">
+            <SurveyResult />
+          </Route>
+          <Route path="/my-page">
+            <MyPage />
+          </Route>
+        </Switch>
+      </>
+    </div>
   );
 };
 
