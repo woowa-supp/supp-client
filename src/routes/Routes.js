@@ -8,7 +8,7 @@ import MyPage from "../component/MyPage";
 
 const Routes = (props) => {
   return (
-    <>
+    <div className="main-container">
       <BrowserRouter>
         <Switch>
           <Route exact path="/">
@@ -28,7 +28,7 @@ const Routes = (props) => {
           </Route>
         </Switch>
       </BrowserRouter>
-    </>
+    </div>
   );
 };
 
