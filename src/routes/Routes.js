@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Home from "../component/Home";
 import SurveyType from "../component/SurveyType";
 import SurveyStyle from "../component/SurveyStyle";
@@ -9,7 +9,7 @@ import MyPage from "../component/MyPage";
 const Routes = (props) => {
   return (
     <div className="main-container">
-      <BrowserRouter>
+      <>
         <Switch>
           <Route exact path="/">
             <Home />
@@ -27,7 +27,7 @@ const Routes = (props) => {
             <MyPage />
           </Route>
         </Switch>
-      </BrowserRouter>
+      </>
     </div>
   );
 };
