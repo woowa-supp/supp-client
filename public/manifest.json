@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "SUPP",
+  "name": "식전 수프처럼 페어와의 협업 맛을 돋우는 애피타이저, SUPP",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,12 +8,12 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "supp_logo.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "supp_logo.png",
       "type": "image/png",
       "sizes": "512x512"
     }
