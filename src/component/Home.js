@@ -1,8 +1,15 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import SuppButton from "./common/SuppButton";
 import { HOME_SUBTITLE, HOME_TITLE } from "../const/constants";
 
 const Home = (props) => {
+    const history = useHistory();
+
+    const startSurvey = () => {
+        history.push("/survey-type")
+    }
+
   const loadButtonsByLogin = () => {
     if (true) {
       return (
@@ -11,6 +18,7 @@ const Home = (props) => {
             content="조사 시작하기"
             fontColor="#ffffff"
             bgColor="#007bff"
+            handleClick={startSurvey}
           />
           <SuppButton
             content="로그아웃"

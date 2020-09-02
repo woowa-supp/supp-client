@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import SuppButton from "./common/SuppButton";
-import { SURVEY_TYPE_STAGES } from "../const/STAGES";
+import { SURVEY_TYPE_STAGES } from "../const/stages";
 
 const SurveyType = (props) => {
   const [stage, setStage] = useState(0);
