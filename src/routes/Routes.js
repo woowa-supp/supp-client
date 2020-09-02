@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 import Home from "../component/Home";
 import SurveyType from "../component/SurveyType";
-import SurveyStyle from "../component/SurveyStyle";
+import SurveyStyle from "../component/survey-style/SurveyStyle";
 import SurveyResult from "../component/SurveyResult";
 import MyPage from "../component/MyPage";
 
