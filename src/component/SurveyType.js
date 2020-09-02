@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import SuppButton from "./common/SuppButton";
-import { STAGES } from "../const/stages";
+import { SURVEY_TYPE_STAGES } from "../const/STAGES";
 
 const SurveyType = (props) => {
   const [stage, setStage] = useState(0);
@@ -19,19 +19,23 @@ const SurveyType = (props) => {
 
   return (
     <div>
-      <div className="title">{STAGES[stage].question}</div>
+      <div className="title">{SURVEY_TYPE_STAGES[stage].question}</div>
       <div className="survey-type-buttons">
         <SuppButton
-          content={STAGES[stage].leftAnswer}
+          content={SURVEY_TYPE_STAGES[stage].leftAnswer}
           fontColor="#ffffff"
           bgColor="#007bff"
-          handleClick={() => updateStage(STAGES[stage].leftDestination)}
+          handleClick={() =>
+            updateStage(SURVEY_TYPE_STAGES[stage].leftDestination)
+          }
         />
         <SuppButton
-          content={STAGES[stage].rightAnswer}
+          content={SURVEY_TYPE_STAGES[stage].rightAnswer}
           fontColor="#ffffff"
           bgColor="#007bff"
-          handleClick={() => updateStage(STAGES[stage].rightDestination)}
+          handleClick={() =>
+            updateStage(SURVEY_TYPE_STAGES[stage].rightDestination)
+          }
         />
       </div>
     </div>
