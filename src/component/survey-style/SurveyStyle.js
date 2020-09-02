@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import MultipleChoice from "./MultipleChoice";
 import ShortWriting from "./ShortWriting";
-import { SURVEY_STYLE_STAGES } from "../../const/STAGES";
+import { SURVEY_STYLE_STAGES } from "../../const/stages";
 
 const SurveyStyle = (props) => {
   const [stage, setStage] = useState(0);
