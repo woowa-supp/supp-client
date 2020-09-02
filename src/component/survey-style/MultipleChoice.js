@@ -4,8 +4,8 @@ import SuppButton from "../common/SuppButton";
 const MultipleChoice = ({ choices, handleClick }) => {
   return (
     <div onClick={handleClick}>
-      {choices.map((choice) => (
-        <SuppButton content={choice} handleClick={handleClick} />
+      {choices.map((choice, index) => (
+        <SuppButton content={choice} handleClick={handleClick} key={`choice-${index}`} />
       ))}
     </div>
   );
