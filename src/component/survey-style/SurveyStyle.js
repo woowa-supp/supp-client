@@ -9,12 +9,14 @@ const SurveyStyle = (props) => {
   const history = useHistory();
 
   const updateStage = () => {
+    // todo set answer
     setStage(stage + 1);
   };
 
   const submitResult = () => {
     // todo api to server and redirect with type result page
-    history.push(`/survey-result`);
+    updateStage();
+    history.push(`/survey-result/ninja`);
   };
 
   if (stage <= 4) {
@@ -27,7 +29,7 @@ const SurveyStyle = (props) => {
         />
       </div>
     );
-  } else if (stage <= 7) {
+  } else if (stage <= 6) {
     return (
       <div>
         <div className="title">{SURVEY_STYLE_STAGES[stage].question}</div>
@@ -39,7 +41,16 @@ const SurveyStyle = (props) => {
       </div>
     );
   } else {
-    submitResult();
+    return (
+      <div>
+        <div className="title">{SURVEY_STYLE_STAGES[stage].question}</div>
+        <ShortWriting
+          content={SURVEY_STYLE_STAGES[stage].content}
+          handleClick={submitResult}
+          buttonContent={SURVEY_STYLE_STAGES[stage].buttonContent}
+        />
+      </div>
+    );
   }
 };
 
